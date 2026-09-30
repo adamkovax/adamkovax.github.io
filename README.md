@@ -27,4 +27,10 @@ bun run dev
 
 ## Élesítés
 
-Minden `main`-re pusholt commit után a GitHub Actions lebuildeli az oldalt és kiteszi GitHub Pagesre ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)). Kb. 1 perc, amíg a változás élesben megjelenik.
+```bash
+bun run deploy
+```
+
+Lebuildeli az oldalt, és a `dist` tartalmát feltölti a `gh-pages` branchre, amiről a GitHub Pages kiszolgálja. Kb. 1 perc, amíg a változás élesben megjelenik. A forráskód változtatásait ettől függetlenül a `main`-re kell pusholni.
+
+Automatikus élesítés (GitHub Actions) akkor lehetséges, ha a gépen lévő `gh` bejelentkezés `workflow` jogosultságot kap: `gh auth refresh -h github.com -s workflow`.
