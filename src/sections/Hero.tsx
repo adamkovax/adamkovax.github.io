@@ -1,4 +1,4 @@
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight, BadgeCheck, Linkedin } from "lucide-react";
 import { useContent } from "@/content";
 import { HeroBackground } from "@/components/HeroBackground";
 import { buttonClass, cn } from "@/lib/cn";
@@ -13,9 +13,16 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-4 pb-12 pt-14 md:px-6 md:pt-20 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 lg:pb-16 lg:pt-24">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-card px-3 py-1 text-xs font-semibold text-primary">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-            {h.badge}
+          {/* A PMP külön, kiemelt jelvény: ez a terület legfontosabb minősítése. */}
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/60 bg-primary/15 px-3.5 py-1.5 text-sm font-bold text-primary">
+              <BadgeCheck className="h-4 w-4" aria-hidden />
+              {h.pmpBadge}
+            </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-card px-3 py-1 text-xs font-semibold text-primary">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+              {h.badge}
+            </div>
           </div>
 
           <h1 className="mt-6 text-5xl font-extrabold leading-[1.02] tracking-tight text-foreground sm:text-6xl md:text-7xl">

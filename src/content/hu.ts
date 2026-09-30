@@ -61,7 +61,8 @@ export const hu = {
   menuLabel: "Menü",
 
   hero: {
-    badge: "PMP · Accredited Scrum Master · AWS partner · Lovable Expert",
+    pmpBadge: "Project Management Professional (PMP)",
+    badge: "Accredited Scrum Master · AWS partner · Lovable Expert",
     name: "Kovács Ádám",
     role: "IT projektmenedzser és AI‑bevezetési tanácsadó",
     leadBefore: "A projekt teljes életciklusában otthon vagyok, az első ügyféltalálkozótól a számlázásig, ",
@@ -95,7 +96,7 @@ export const hu = {
       { icon: Building2, label: "Bázis", value: "Budapest" },
       { icon: Languages, label: "Nyelvek", value: "Magyar, angol (B2/C1)" },
       { icon: GraduationCap, label: "Végzettség", value: "Gazdaságinformatikus BSc" },
-      { icon: KanbanSquare, label: "Módszertan", value: "PMP, Scrum, Kanban" },
+      { icon: KanbanSquare, label: "Módszertan", value: "Agilis: Scrum, hibrid, Kanban" },
       { icon: Workflow, label: "Eszközök", value: "Claude Code, Lovable, GitHub, JIRA, Miro, AWS, Vercel, Supabase, Sanity" },
     ],
   },
@@ -127,7 +128,7 @@ export const hu = {
       {
         icon: Rocket,
         title: "Megvalósítás",
-        text: "Projektvezetés PMP és Scrum alapokon, státuszriportok, kockázatkezelés.",
+        text: "Projektvezetés agilis és hibrid módszertannal, státuszriportok, kockázatkezelés.",
         with: ["Fejlesztők", "Ügyfél"],
       },
       {
@@ -484,7 +485,7 @@ export const hu = {
     certsTitle: "Minősítések",
     newLabel: "Új",
     certs: [
-      { icon: BadgeCheck, title: "PMP", subtitle: "Project Management Professional · PMI" },
+      { icon: BadgeCheck, title: "Project Management Professional (PMP)", subtitle: "Project Management Institute (PMI)" },
       {
         icon: BadgeCheck,
         title: "Lovable Expert",
