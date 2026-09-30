@@ -70,8 +70,6 @@ export const hu = {
     primaryCta: "Írj nekem",
     secondaryCta: "LinkedIn-profil",
     photoAlt: "Kovács Ádám portréja",
-    toolsLabel: "Amivel dolgozom",
-    tools: ["Claude Code", "Lovable", "GitHub", "JIRA", "Miro", "AWS", "Vercel", "Supabase", "Sanity"],
   },
 
   stats: [

@@ -60,21 +60,6 @@ export function Hero() {
                 fetchPriority="high"
               />
             </picture>
-
-            {/* Eszköztár-sáv a kép alján: felirattal, hogy a címkék logikája egyértelmű legyen. */}
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/85 to-transparent px-4 pb-4 pt-14">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-primary">{h.toolsLabel}</p>
-              <ul className="mt-2 grid grid-cols-3 gap-1.5">
-                {h.tools.map((tool) => (
-                  <li
-                    key={tool}
-                    className="rounded-full border border-primary/40 bg-background/80 px-2 py-1 text-center text-xs font-semibold text-foreground backdrop-blur"
-                  >
-                    {tool}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
