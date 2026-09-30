@@ -3,7 +3,8 @@ import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
 import { Delivery } from "@/sections/Delivery";
-import { AiFirst } from "@/sections/AiFirst";
+import { AiDelivery } from "@/sections/AiDelivery";
+import { AiDaily } from "@/sections/AiDaily";
 import { Experience } from "@/sections/Experience";
 import { Clients } from "@/sections/Clients";
 import { Responsibilities } from "@/sections/Responsibilities";
@@ -27,7 +28,8 @@ export function App() {
         <Hero />
         <About />
         <Delivery />
-        <AiFirst />
+        <AiDelivery />
+        <AiDaily />
         <Experience />
         <Clients />
         <Responsibilities />

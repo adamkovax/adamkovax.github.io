@@ -23,6 +23,8 @@ const companies = {
   cheppers: { name: "Cheppers USA", logo: "/logos/cheppers.svg", size: "md", url: "https://cheppers.com" },
   devertix: { name: "Devertix", logo: "/logos/devertix.png", size: "xl", treatment: "knockout", url: "https://devertix.hu" },
 
+  athene: { name: "Athene AI", logo: "/logos/athene.svg", size: "md", url: "https://www.atheneai.hu/" },
+
   mbh: { name: "MBH Bank", logo: "/logos/mbh.svg", size: "md" },
   praktiker: { name: "Praktiker", logo: "/logos/praktiker.svg", size: "md", treatment: "knockout" },
   ey: { name: "EY", logo: "/logos/ey.svg", size: "xl" },

@@ -3,9 +3,6 @@ import { useContent } from "@/content";
 import { HeroBackground } from "@/components/HeroBackground";
 import { buttonClass, cn } from "@/lib/cn";
 
-// A lebegő címkék helye a portré körül, a címkék sorrendjében.
-const FLOAT_POSITIONS = ["-left-3 top-8", "-right-3 bottom-20", "left-6 -bottom-4"];
-
 export function Hero() {
   const t = useContent();
   const h = t.hero;
@@ -25,7 +22,11 @@ export function Hero() {
             {h.name}
           </h1>
 
-          <p className="mt-6 max-w-2xl text-xl font-semibold leading-snug text-foreground md:text-2xl">
+          <p className="mt-5 text-lg font-semibold uppercase tracking-wider text-muted-foreground md:text-xl">
+            {h.role}
+          </p>
+
+          <p className="mt-4 max-w-2xl text-xl font-semibold leading-snug text-foreground md:text-2xl">
             {h.leadBefore}
             <span className="text-primary">{h.leadHighlight}</span>
           </p>
@@ -59,20 +60,22 @@ export function Hero() {
                 fetchPriority="high"
               />
             </picture>
-          </div>
 
-          {h.floating.map((label, i) => (
-            <span
-              key={label}
-              className={cn(
-                "absolute hidden items-center gap-2 rounded-full border border-primary/40 bg-background/90 px-3 py-1.5 text-xs font-semibold text-foreground shadow-lg shadow-black/40 backdrop-blur sm:inline-flex",
-                FLOAT_POSITIONS[i],
-              )}
-            >
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-              {label}
-            </span>
-          ))}
+            {/* Eszköztár-sáv a kép alján: felirattal, hogy a címkék logikája egyértelmű legyen. */}
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/85 to-transparent px-4 pb-4 pt-14">
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-primary">{h.toolsLabel}</p>
+              <ul className="mt-2 grid grid-cols-3 gap-1.5">
+                {h.tools.map((tool) => (
+                  <li
+                    key={tool}
+                    className="rounded-full border border-primary/40 bg-background/80 px-2 py-1 text-center text-xs font-semibold text-foreground backdrop-blur"
+                  >
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 

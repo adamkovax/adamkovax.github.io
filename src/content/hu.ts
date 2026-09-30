@@ -1,32 +1,37 @@
 import {
   Award,
   BadgeCheck,
+  BarChart3,
   Bot,
+  BrainCircuit,
   Building2,
   CalendarRange,
+  ClipboardCheck,
   Cloud,
   CloudCog,
   Code2,
   FileSignature,
+  FlaskConical,
   GraduationCap,
+  Handshake,
   HeartHandshake,
+  KanbanSquare,
   Landmark,
   Languages,
-  LayoutTemplate,
+  Lightbulb,
   Mic,
   MonitorSmartphone,
+  NotebookPen,
   Palette,
   Presentation,
   Receipt,
   Rocket,
+  Route,
+  Scale,
   ShieldCheck,
   Smartphone,
   Sparkles,
   Workflow,
-  Handshake,
-  KanbanSquare,
-  BarChart3,
-  Lightbulb,
 } from "lucide-react";
 import type { CompanyId } from "./companies";
 
@@ -38,59 +43,63 @@ import type { CompanyId } from "./companies";
 
 const EMAIL = "adam.kovx@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/%C3%A1d%C3%A1m-kov%C3%A1cs-pmp-1a7563b0/";
-const REPO = "https://github.com/adamkovax/adamkovax.github.io";
 
 export const hu = {
   lang: "hu",
 
-  links: { email: EMAIL, linkedin: LINKEDIN, repo: REPO },
+  links: { email: EMAIL, linkedin: LINKEDIN },
 
   nav: [
     { id: "rolam", label: "Rólam" },
     { id: "delivery", label: "Delivery" },
-    { id: "ai", label: "AI" },
+    { id: "ai", label: "AI-bevezetés" },
     { id: "tapasztalat", label: "Tapasztalat" },
     { id: "ugyfelek", label: "Ügyfelek" },
     { id: "minositesek", label: "Minősítések" },
   ],
   navCta: "Kapcsolat",
-  brandTagline: "Delivery · AI · AWS",
+  brandTagline: "Projektek · AI · AWS",
   menuLabel: "Menü",
 
   hero: {
-    badge: "PMP · Accredited Scrum Master · AWS partner",
+    badge: "PMP · Accredited Scrum Master · AWS és Lovable partner",
     name: "Kovács Ádám",
-    leadBefore: "Delivery- és projektvezető vagyok. A projektet az első megbeszéléstől a számlázásig viszem, ",
+    role: "IT projektmenedzser és AI‑bevezetési tanácsadó",
+    leadBefore: "Az első ügyféltalálkozótól a számlázásig végigviszem a projekteket, ",
     leadHighlight: "AI-first szemlélettel.",
     body: "Több mint 8 év technológiai projekt- és ügyfélmenedzsment a KPMG-nél, szoftverfejlesztő és AWS felhőcégeknél. Az AI-t nem csak ajánlom: minden nap ezzel dolgozom.",
     primaryCta: "Írj nekem",
     secondaryCta: "LinkedIn-profil",
     photoAlt: "Kovács Ádám portréja",
-    floating: ["Claude Code", "AWS GenAI kompetencia", "JIRA"],
+    toolsLabel: "Amivel dolgozom",
+    tools: ["Claude Code", "Lovable", "GitHub", "JIRA", "HubSpot", "AWS"],
   },
 
   stats: [
     { value: "8+", label: "év technológiai projekt- és ügyfélmenedzsment" },
     { value: "11+", label: "AWS partnerminősítés, köztük a GenAI kompetencia" },
-    { value: "30", label: "weboldal migrálva AWS-re egyetlen projektben" },
+    { value: "3+", label: "év tapasztalat AI-projektekben" },
     { value: "2", label: "zöldmezős JIRA-bevezetés a nulláról" },
   ],
 
   about: {
     eyebrow: "Rólam",
     title: "Nem csak projektet menedzselek. A teljes delivery-t viszem.",
+    // Az első két bekezdés és a kiemelés az aifirstmentors.com/rolunk szövege.
     paragraphs: [
-      "A KPMG-nél öt év alatt komplex rendszerbevezetéseken dolgoztam, főleg banki, biztosítói, energetikai és kereskedelmi ügyfeleknél. Ezután szoftverfejlesztési és AWS felhőprojekteket vezettem, bevezettem az SDLC-folyamatot és az agilis működést, és két cégnél is a nulláról építettem fel a JIRA-t.",
+      "Több mint nyolc éve dolgozom tanácsadóként és projektmenedzserként, az elmúlt három évben pedig AI-bevezetési projekteken leginkább hazai kkv-knál és nagyvállalatoknál.",
+      "Az AI-t az első nyilvánosan elérhető modellek megjelenése óta követem, és a munkám mellett a mindennapjaimban is használom. Segítségével időt, energiát és költségeket takarítottam meg nemcsak magamnak, hanem kollégáimnak, barátaimnak és családomnak is.",
       "Ma a delivery teljes ívét koordinálom: a pre-sales beszélgetéstől és a cégbemutatótól az ajánlatadáson, a tervezésen és a megvalósításon át a teljesítésigazolásig és a számlázásig. Közben felelek az ügyfél-elégedettségért és a cég AWS-partnerkapcsolatáért is.",
-      "Az AI nálam munkaeszköz, nem kísérlet. Claude Code-dal agenteket építek, amelyek a JIRA-ban, a HubSpotban, az ajánlatkészítésben és a marketingben dolgoznak, és ugyanezt a szemléletet adom tovább nonprofit alapon az AI First Mentors közösségben.",
     ],
+    quote: "A tapasztalatom szerint a legtöbb kihívásnál nem a probléma nagysága számít, hanem a megfelelő megközelítés megtalálása.",
+    quoteHighlight: "Ezt a gyakorlati szemléletet hozom el minden projektbe, egyszerűbb és összetettebb helyzetekben is.",
     factsTitle: "Röviden",
     facts: [
       { icon: Building2, label: "Bázis", value: "Budapest" },
       { icon: Languages, label: "Nyelvek", value: "Magyar, angol (B2/C1)" },
       { icon: GraduationCap, label: "Végzettség", value: "Gazdaságinformatikus BSc" },
       { icon: KanbanSquare, label: "Módszertan", value: "PMP, Scrum, Kanban" },
-      { icon: Workflow, label: "Eszközök", value: "JIRA, HubSpot, Miro, Claude Code, AWS" },
+      { icon: Workflow, label: "Eszközök", value: "Claude Code, Lovable, JIRA, HubSpot, AWS" },
     ],
   },
 
@@ -135,11 +144,106 @@ export const hu = {
       "A háttérben pedig PMO-riportok és erőforrás-tervezés fut JIRA-ban, amelyeket én építettem fel.",
   },
 
-  ai: {
-    eyebrow: "AI-first a gyakorlatban",
-    title: "Az AI-t nem csak ajánlom. Minden nap ezzel dolgozom.",
+  // Ügyfeleknél végzett AI-munka: bevezetés, tanácsadás, termékfejlesztés.
+  aiDelivery: {
+    eyebrow: "AI-bevezetés",
+    title: "Három éve vezetek AI-bevezetéseket ügyfeleknél.",
     description:
-      "A munkában és a hétköznapokban is AI-first szemlélettel élek: ha egy feladatot okosabban is el lehet végezni, megkeresem rá a módját, és utána másoknak is megmutatom.",
+      "Kkv-knak és nagyvállalatoknak, a tervezéstől a PoC-n át az élesítésig, saját bevezetési módszertannal.",
+    stats: [
+      { value: "3+ év", label: "AI-bevezetési projektek, több párhuzamosan" },
+      { value: "1–5 hónap", label: "egy AI-projekt átlagos átfutása" },
+      { value: "1–4 hét", label: "egy AI-projekt részletes tervezése" },
+    ],
+    cards: [
+      {
+        icon: Scale,
+        title: "AI-tanácsadás és tervezés",
+        text: "AI-projektek részletes tervezése a szabályozói keretek figyelembevételével, hogy a bevezetés ne a megfelelésen bukjon el.",
+        tags: ["EU AI Act", "DORA", "MNB"],
+      },
+      {
+        icon: FlaskConical,
+        title: "PoC-k leszállítása",
+        text: "Gyors proof of conceptek, amelyekből az ügyfél a teljes bevezetés előtt látja, mit hoz az AI a saját folyamataiban.",
+        tags: ["PoC", "GenAI"],
+      },
+      {
+        icon: Route,
+        title: "Saját bevezetési módszertan",
+        text: "Saját AI-bevezetési módszertant dolgoztam ki: a megfelelő probléma kiválasztásától az integráció mélységének meghatározásáig.",
+        tags: ["Módszertan"],
+      },
+      {
+        icon: BrainCircuit,
+        title: "AI termékfejlesztés",
+        text: "Az Athene AI a Devertix, az R-Szoft és az Alvicom közös generatív AI platformja, amely a vállalati folyamatokra épül.",
+        logo: "athene" as CompanyId,
+        link: { label: "atheneai.hu", href: "https://www.atheneai.hu/" },
+      },
+      {
+        icon: Award,
+        title: "AWS GenAI kompetencia",
+        text: "Alliance Leadként végigvittem, hogy a cég megszerezze az AWS Generative AI kompetenciát. Erre vagyok a legbüszkébb.",
+        tags: ["AWS", "Generative AI"],
+        highlight: true,
+      },
+      {
+        icon: Mic,
+        title: "Előadó AI-webináron",
+        text: "„AI a mindennapi üzleti folyamatokban” az AWS és a TD SYNNEX részvételével. Arról beszéltem, miért más megközelítést kíván egy AI-bevezetés, mint egy hagyományos szoftverfejlesztés.",
+        link: {
+          label: "A webinár oldala",
+          href: "https://devertix.hu/AI-a-mindennapi-uzleti-folyamatokban-AWS-en/",
+        },
+      },
+    ],
+  },
+
+  // A saját PM-munkában használt AI: konkrét, ismétlődő feladatok.
+  aiDaily: {
+    eyebrow: "AI-first a mindennapokban",
+    title: "Projektmenedzserként is AI‑jal dolgozom.",
+    description:
+      "Az AI-t nem csak ügyfeleknél vezetem be. A saját munkámban is minden nap használom, ezekre a feladatokra például:",
+    useCases: [
+      {
+        icon: Presentation,
+        title: "Céges bemutatkozók és weboldalak",
+        text: "Bemutatkozó prezentációk, landing és webinároldalak, például a webinar.devertix.com.",
+        tools: ["Lovable", "Claude Code", "GitHub"],
+      },
+      {
+        icon: KanbanSquare,
+        title: "JIRA-projektek AI-jal",
+        text: "JIRA-integrációval hozom létre a projekteket, alakítom ki a story-kat és készítem a riportokat.",
+        tools: ["Claude Code", "JIRA"],
+      },
+      {
+        icon: FileSignature,
+        title: "Ajánlatok céges sablonokban",
+        text: "Ajánlatok elkészítése a cég saját template dokumentumaiban.",
+        tools: ["Claude Code"],
+      },
+      {
+        icon: ClipboardCheck,
+        title: "Riportok, TIG-ek, tesztjegyzőkönyvek",
+        text: "Státuszriportok, teljesítésigazolások és tesztjegyzőkönyvek generálása.",
+        tools: ["Claude Code", "JIRA"],
+      },
+      {
+        icon: NotebookPen,
+        title: "Emlékeztetők és jegyzőkönyvek",
+        text: "Meetingek emlékeztetői és jegyzőkönyvei, gyorsan és egységes formában.",
+        tools: ["Claude"],
+      },
+      {
+        icon: Bot,
+        title: "HubSpot- és marketing-agentek",
+        text: "Saját agentek a HubSpot-folyamatokhoz és a marketingfeladatokhoz.",
+        tools: ["Claude Code", "HubSpot"],
+      },
+    ],
     terminal: {
       title: "claude · kovacs-adam-cv",
       prompt: "Készíts bemutatkozó oldalt a CV-m alapján, az AI First Mentors színeivel.",
@@ -151,74 +255,40 @@ export const hu = {
         "Build kész, élesítés GitHub Pagesre",
       ],
       done: "adamkovax.github.io",
-      caption: "Ezt az oldalt is Claude Code-dal építettem. A forráskód nyilvános a GitHubon.",
-      captionLink: "Forráskód megnyitása",
+      caption: "Ezt az oldalt is AI-jal építettem, Claude Code-dal.",
     },
-    cards: [
-      {
-        icon: Bot,
-        title: "Saját agentek Claude Code-dal",
-        text: "Agenteket építek JIRA-integrációhoz, HubSpot-folyamatokhoz, ajánlatkészítéshez és marketingfeladatokhoz, hogy a rutinmunka ne a csapat idejét vigye.",
-        tags: ["Claude Code", "JIRA", "HubSpot"],
-      },
-      {
-        icon: Sparkles,
-        title: "AI-bevezetés ügyfeleknél",
-        text: "AI-bevezetési és AI-tanácsadási projekteken dolgozom hazai kkv-knál és nagyvállalatoknál, a megfelelő probléma kiválasztásától az élesítésig.",
-        tags: ["AI-bevezetés", "AI-tanácsadás"],
-      },
-      {
-        icon: Award,
-        title: "AWS GenAI kompetencia",
-        text: "Alliance Leadként végigvittem, hogy a cég megszerezze az AWS Generative AI kompetenciát. Erre vagyok a legbüszkébb.",
-        tags: ["AWS", "Generative AI"],
-        highlight: true,
-      },
-      {
-        icon: LayoutTemplate,
-        title: "Landing oldalak AI-jal",
-        text: "Webinár- és kampányoldalakat építek AI-eszközökkel, például a Devertix webinároldalát.",
-        link: { label: "webinar.devertix.com", href: "https://webinar.devertix.com" },
-      },
-      {
-        icon: Mic,
-        title: "Előadó AI-webináron",
-        text: "„AI a mindennapi üzleti folyamatokban” az AWS és a TD SYNNEX részvételével. Arról beszéltem, miért más megközelítést kíván egy AI-bevezetés, mint egy hagyományos szoftverfejlesztés.",
-        link: {
-          label: "A webinár oldala",
-          href: "https://devertix.hu/AI-a-mindennapi-uzleti-folyamatokban-AWS-en/",
-        },
-      },
-      {
-        icon: Lightbulb,
-        title: "AI First Mentors",
-        text: "Nonprofit kezdeményezés a testvéremmel: hétköznapi embereknek és egyéni vállalkozóknak mutatjuk meg, hol spórol nekik időt és pénzt az AI.",
-        link: { label: "aifirstmentors.com", href: "https://aifirstmentors.com" },
-      },
-    ],
+    nonprofit: {
+      icon: Lightbulb,
+      title: "AI First Mentors",
+      text: "Nonprofit kezdeményezés a testvéremmel: hétköznapi embereknek és egyéni vállalkozóknak mutatjuk meg, hol spórol nekik időt és pénzt az AI.",
+      link: { label: "aifirstmentors.com", href: "https://aifirstmentors.com" },
+    },
   },
 
   experience: {
     eyebrow: "Szakmai út",
-    title: "A Big4 tanácsadástól az AWS felhőig.",
+    title: "A Big4 tanácsadástól az AI-bevezetésig.",
     description:
-      "Nagyvállalati rendszerbevezetések, szoftver- és mobilfejlesztés, majd felhőprojektek és partnerkapcsolatok. Minden állomás hozzátett a delivery egy újabb darabjához.",
+      "Nagyvállalati rendszerbevezetések, szoftver- és mobilfejlesztés, felhőprojektek, majd AI-bevezetések. Minden állomás hozzátett a delivery egy újabb darabjához.",
     items: [
       {
         company: "devertix" as CompanyId,
         companyLabel: "Devertix · Alvicom Group",
         period: "2024 – napjainkig",
-        role: "IT projekt- és szolgáltatásmenedzser · Cloud Squad Manager · AWS Alliance Lead",
+        role: "IT projektmenedzser · AI-bevezetés · AWS Alliance Lead",
         summary:
-          "AWS felhő- és webfejlesztési projektek, a delivery teljes íve, és a cég AWS-partnerkapcsolata.",
+          "AI-bevezetési és AWS felhőprojektek, a delivery teljes íve, és a cég AWS-partnerkapcsolata.",
         bullets: [
-          "AWS felhő- és webfejlesztési projektek vezetése, szolgáltatásmenedzsment a 7x24-es AWS supportszerződésekhez.",
+          "AI-bevezetési projektek kkv-knak és nagyvállalatoknak: több párhuzamos projekt átlagosan 1–5 hónapos átfutással, PoC-k leszállításával.",
+          "AI-tanácsadás és AI-projektek részletes tervezése 1–4 hét alatt, az EU AI Act, a DORA és az MNB-elvárások figyelembevételével. Saját AI-bevezetési módszertan kidolgozása.",
+          "AI termékfejlesztés: az Athene AI platform (atheneai.hu).",
+          "AWS felhő- és webfejlesztési projektek, szolgáltatásmenedzsment a 7x24-es AWS supportszerződésekhez.",
           "Pre-sales, cégbemutatók, ajánlatkészítés és szerződéskötés, majd TIG és számlázás a pénzüggyel összehangolva.",
           "Account management például az MBH Banknál és az EY-nál: havi elszámolás, ügyfél-elégedettség, negyedéves retro.",
           "AWS Alliance Lead: kapcsolattartás az AWS-sel és a TD SYNNEX-szel, partnertámogatások tárgyalása és lehívása, a GenAI kompetencia és további 10+ AWS-minősítés megszerzése.",
-          "Zöldmezős JIRA-bevezetés, PMO-riportok és resource planning, Cloud Squad Managerként a csapat jóllétéért is felelek.",
+          "Zöldmezős JIRA-bevezetés, PMO-riportok és resource planning.",
         ],
-        tags: ["AWS", "Pre-sales", "Account management", "JIRA", "AI"],
+        tags: ["AI-bevezetés", "AWS", "Pre-sales", "Account management", "JIRA"],
       },
       {
         company: "cheppers" as CompanyId,
@@ -294,16 +364,18 @@ export const hu = {
     eyebrow: "Technológiai területek",
     title: "Ahol otthon vagyok.",
     items: [
+      { icon: Sparkles, title: "AI-bevezetés", note: "GenAI, PoC, agentek" },
+      { icon: Scale, title: "AI-tanácsadás", note: "EU AI Act, DORA, MNB" },
+      { icon: BrainCircuit, title: "AI termékfejlesztés", note: "Athene AI" },
+      { icon: Cloud, title: "Felhőmigráció", note: "AWS" },
+      { icon: CloudCog, title: "Felhőüzemeltetés", note: "7x24 support, SLA" },
       { icon: Building2, title: "ERP-bevezetés", note: "SAP S/4HANA" },
       { icon: Landmark, title: "Banki rendszerek", note: "Azonnali Fizetési Rendszer" },
       { icon: Code2, title: "Szoftverfejlesztés", note: "SDLC, agilis" },
       { icon: Smartphone, title: "Mobilalkalmazások", note: "Tervezéstől az átadásig" },
-      { icon: MonitorSmartphone, title: "Webfejlesztés", note: "Drupal, landing oldalak" },
-      { icon: Cloud, title: "Felhőmigráció", note: "AWS" },
-      { icon: CloudCog, title: "Felhőüzemeltetés", note: "7x24 support, SLA" },
-      { icon: Sparkles, title: "AI-bevezetés", note: "GenAI, agentek" },
-      { icon: Lightbulb, title: "AI-tanácsadás", note: "Use case-ek, bevezetési terv" },
+      { icon: MonitorSmartphone, title: "Webfejlesztés", note: "Drupal, Lovable" },
       { icon: Palette, title: "UX/UI projektek", note: "Tervezés, prototípus" },
+      { icon: ShieldCheck, title: "Minőségirányítás", note: "ISO 9001" },
     ],
   },
 
@@ -373,14 +445,28 @@ export const hu = {
     eyebrow: "Minősítések és végzettség",
     title: "Papíron is igazolva.",
     certsTitle: "Minősítések",
+    newLabel: "Új",
     certs: [
       { icon: BadgeCheck, title: "PMP", subtitle: "Project Management Professional · PMI" },
+      {
+        icon: BadgeCheck,
+        title: "Lovable Partner",
+        subtitle: "Lovable · 2026. szeptember",
+        logo: { src: "/logos/lovable-icon.svg", treatment: "color" },
+        isNew: true,
+      },
       { icon: BadgeCheck, title: "Accredited Scrum Master", subtitle: "Scrum Master of Hungary · 2022" },
-      { icon: BadgeCheck, title: "AWS Partner: Sales Accreditation", subtitle: "Amazon Web Services" },
+      {
+        icon: BadgeCheck,
+        title: "AWS Partner: Sales Accreditation",
+        subtitle: "Amazon Web Services",
+        logo: { src: "/logos/aws.svg", treatment: "mono" },
+      },
       {
         icon: BadgeCheck,
         title: "AWS Partner: Business és Technical Accreditation",
         subtitle: "Amazon Web Services",
+        logo: { src: "/logos/aws.svg", treatment: "mono" },
       },
       {
         icon: BadgeCheck,
@@ -424,8 +510,6 @@ export const hu = {
 
   footer: {
     rights: "Kovács Ádám",
-    builtWith: "Claude Code-dal építve",
-    source: "Forráskód",
     top: "Vissza a tetejére",
   },
 };

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, Copy, Linkedin, Mail, MapPin, Send, Github, ArrowUp } from "lucide-react";
+import { ArrowUp, Check, Copy, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { useContent } from "@/content";
 import { Eyebrow, GalaxyVeil } from "@/components/ui";
 import { buttonClass } from "@/lib/cn";
@@ -102,17 +102,10 @@ export function Footer() {
             © {new Date().getFullYear()} {f.rights}
           </span>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-          <span>{f.builtWith}</span>
-          <a href={t.links.repo} target="_blank" rel="noreferrer noopener" className="inline-flex items-center gap-1.5 hover:text-primary">
-            <Github className="h-4 w-4" aria-hidden />
-            {f.source}
-          </a>
-          <a href="#top" className="inline-flex items-center gap-1.5 hover:text-primary">
-            <ArrowUp className="h-4 w-4" aria-hidden />
-            {f.top}
-          </a>
-        </div>
+        <a href="#top" className="inline-flex items-center gap-1.5 hover:text-primary">
+          <ArrowUp className="h-4 w-4" aria-hidden />
+          {f.top}
+        </a>
       </div>
     </footer>
   );

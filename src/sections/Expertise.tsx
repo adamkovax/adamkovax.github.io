@@ -9,7 +9,7 @@ export function Expertise() {
     <Section id="teruletek" className="pt-4 md:pt-8">
       <SectionHeading eyebrow={x.eyebrow} title={x.title} className="reveal" />
 
-      <ul className="reveal mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+      <ul className="reveal mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {x.items.map(({ icon: Icon, title, note }) => (
           <li
             key={title}

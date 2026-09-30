@@ -18,6 +18,9 @@ export function About() {
               <p key={p}>{p}</p>
             ))}
           </div>
+          <blockquote className="mt-6 rounded-2xl border border-primary/30 bg-card p-5 text-base leading-relaxed text-foreground/90 md:p-6 md:text-lg">
+            {a.quote} <span className="font-semibold text-primary">{a.quoteHighlight}</span>
+          </blockquote>
         </div>
 
         <aside className="reveal relative isolate h-fit overflow-hidden rounded-2xl border border-border bg-card p-6 md:p-8">
