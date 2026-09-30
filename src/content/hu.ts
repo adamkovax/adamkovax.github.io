@@ -235,18 +235,57 @@ export const hu = {
         tools: ["Claude"],
       },
     ],
+    // Illusztratív példák arra, hogyan dolgozik PM-ként Claude Code-dal.
     terminal: {
-      title: "claude · kovacs-adam-cv",
-      prompt: "Készíts bemutatkozó oldalt a CV-m alapján, az AI First Mentors színeivel.",
-      // A számokat a komponens tölti ki az adatokból, hogy mindig pontosak legyenek.
-      steps: [
-        "CV és jegyzetek feldolgozva",
-        "{companies} céglogó összegyűjtve a webről",
-        "{sections} szekció megírva magyarul",
-        "Build kész, élesítés GitHub Pagesre",
+      title: "claude code",
+      tabsLabel: "Példák",
+      examples: [
+        {
+          tab: "Prezentáció",
+          prompt: "Készíts céges bemutatkozó prezentációt a referenciáinkból egy banki ügyfélnek.",
+          steps: [
+            "Referenciák és esettanulmányok összegyűjtve",
+            "Történetív: probléma, megoldás, eredmény",
+            "Diák a céges arculattal",
+            "Előadói jegyzetek minden diához",
+          ],
+          done: "bemutatkozo_bank · átnézésre kész",
+        },
+        {
+          tab: "Ajánlat",
+          prompt: "Készíts ajánlatot a tegnapi ügyfélmeeting jegyzeteiből, a céges sablonban.",
+          steps: [
+            "Jegyzetek feldolgozva: igények, kérdések, határidők",
+            "Becslés a korábbi hasonló projektek alapján",
+            "Ütemterv és erőforrásterv hozzáadva",
+            "Ajánlat kitöltve a céges sablonban",
+          ],
+          done: "ajanlat_v1.docx · átnézésre kész",
+        },
+        {
+          tab: "JIRA",
+          prompt: "Hozd létre a JIRA-projektet és a story-kat a jóváhagyott ajánlat alapján.",
+          steps: [
+            "Epicek kialakítva a fő funkciókból",
+            "Story-k elfogadási kritériumokkal és becslésekkel",
+            "Sprintekre bontva, a board beállítva",
+            "Riport-dashboard létrehozva a projekthez",
+          ],
+          done: "JIRA-projekt · átnézésre kész",
+        },
+        {
+          tab: "Státuszriport",
+          prompt: "Készítsd el a heti státuszriportot és a TIG-et a JIRA alapján.",
+          steps: [
+            "JIRA-feladatok lekérdezve az elmúlt hétre",
+            "Elkészült, folyamatban lévő és blokkolt tételek",
+            "Kockázatok és következő lépések",
+            "TIG kitöltve a leszállított tételekkel",
+          ],
+          done: "statuszriport_w40.pdf · átnézésre kész",
+        },
       ],
-      done: "adamkovax.github.io",
-      caption: "Ezt az oldalt is AI-jal építettem, Claude Code-dal.",
+      caption: "Példák a mindennapjaimból. Az AI előkészít, én átnézem és véglegesítem.",
     },
     nonprofit: {
       icon: Lightbulb,

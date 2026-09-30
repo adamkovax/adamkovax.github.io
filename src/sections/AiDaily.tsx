@@ -1,23 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ArrowUpRight, Check } from "lucide-react";
 import { useContent } from "@/content";
-import { COMPANIES } from "@/content/companies";
 import { IconTile, Section, SectionHeading } from "@/components/ui";
+import { cn } from "@/lib/cn";
 
+/** Terminál-kártya fülekkel: néhány PM-feladat, ahogy Claude Code-dal készül. */
 function Terminal() {
   const t = useContent();
   const term = t.aiDaily.terminal;
-  const [sectionCount, setSectionCount] = useState<number | null>(null);
-
-  // A számok a valós oldalból jönnek, így nem avulnak el, ha bővül a tartalom.
-  useEffect(() => {
-    setSectionCount(document.querySelectorAll("main > section").length);
-  }, []);
-
-  const fill = (line: string) =>
-    line
-      .replace("{companies}", String(Object.keys(COMPANIES).length))
-      .replace("{sections}", sectionCount === null ? "…" : String(sectionCount));
+  const [active, setActive] = useState(0);
+  const example = term.examples[active];
 
   return (
     <div className="overflow-hidden rounded-2xl border border-border bg-background/90 font-mono text-[13px] leading-relaxed shadow-2xl shadow-black/50 backdrop-blur">
@@ -27,21 +19,49 @@ function Terminal() {
         <span className="h-3 w-3 rounded-full bg-[#28c840]/80" />
         <span className="ml-3 truncate text-xs text-muted-foreground">{term.title}</span>
       </div>
-      <div className="space-y-2 p-5">
+
+      <div role="tablist" aria-label={term.tabsLabel} className="flex flex-wrap gap-1 border-b border-border px-3 py-2">
+        {term.examples.map((ex, i) => (
+          <button
+            key={ex.tab}
+            type="button"
+            role="tab"
+            id={`term-tab-${i}`}
+            aria-selected={i === active}
+            aria-controls="term-panel"
+            onClick={() => setActive(i)}
+            className={cn(
+              "rounded-md px-2.5 py-1 font-sans text-xs font-semibold transition-colors",
+              i === active ? "bg-primary/15 text-primary" : "text-muted-foreground hover:text-foreground",
+            )}
+          >
+            {ex.tab}
+          </button>
+        ))}
+      </div>
+
+      {/* Fix magasság, hogy a fülváltás ne ugrassa az oldalt. */}
+      <div
+        key={active}
+        id="term-panel"
+        role="tabpanel"
+        aria-labelledby={`term-tab-${active}`}
+        className="min-h-[15.5rem] space-y-2 p-5"
+      >
         <p className="text-foreground">
-          <span className="text-primary">&gt;</span> {term.prompt}
+          <span className="text-primary">&gt;</span> {example.prompt}
         </p>
         <ul className="space-y-1.5 pt-2">
-          {term.steps.map((step) => (
+          {example.steps.map((step) => (
             <li key={step} className="flex gap-2 text-muted-foreground">
               <span className="text-nebula-lilac">●</span>
-              <span>{fill(step)}</span>
+              <span>{step}</span>
             </li>
           ))}
         </ul>
         <p className="flex items-center gap-2 pt-2 text-primary">
-          <Check className="h-4 w-4" aria-hidden />
-          <span className="caret">{term.done}</span>
+          <Check className="h-4 w-4 shrink-0" aria-hidden />
+          <span className="caret">{example.done}</span>
         </p>
       </div>
     </div>
