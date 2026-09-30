@@ -64,7 +64,7 @@ export const hu = {
     badge: "PMP · Accredited Scrum Master · AWS partner · Lovable Expert",
     name: "Kovács Ádám",
     role: "IT projektmenedzser és AI‑bevezetési tanácsadó",
-    leadBefore: "Az első ügyféltalálkozótól a számlázásig végigviszem a projekteket, ",
+    leadBefore: "A projekt teljes életciklusában otthon vagyok, az első ügyféltalálkozótól a számlázásig, ",
     leadHighlight: "AI-first szemlélettel.",
     body: "Több mint 8 év technológiai projekt- és ügyfélmenedzsment a KPMG-nél, szoftverfejlesztő és AWS felhőcégeknél. Az AI-t nem csak ajánlom: minden nap ezzel dolgozom.",
     primaryCta: "Írj nekem",
@@ -81,12 +81,12 @@ export const hu = {
 
   about: {
     eyebrow: "Rólam",
-    title: "Nem csak projektet menedzselek. A teljes delivery-t viszem.",
+    title: "Nem csak projektet menedzselek. A teljes életciklusban tudok segíteni.",
     // Az első két bekezdés és a kiemelés az aifirstmentors.com/rolunk szövege.
     paragraphs: [
       "Több mint nyolc éve dolgozom tanácsadóként és projektmenedzserként, az elmúlt három évben pedig AI-bevezetési projekteken leginkább hazai kkv-knál és nagyvállalatoknál.",
       "Az AI-t az első nyilvánosan elérhető modellek megjelenése óta követem, és a munkám mellett a mindennapjaimban is használom. Segítségével időt, energiát és költségeket takarítottam meg nemcsak magamnak, hanem kollégáimnak, barátaimnak és családomnak is.",
-      "Ma a delivery teljes ívét koordinálom: a pre-sales beszélgetéstől és a cégbemutatótól az ajánlatadáson, a tervezésen és a megvalósításon át a teljesítésigazolásig és a számlázásig. Közben felelek az ügyfél-elégedettségért és a cég AWS-partnerkapcsolatáért is.",
+      "A projekt minden szakaszában részt tudok venni: a pre-sales beszélgetéstől és a cégbemutatótól az ajánlatadáson, a tervezésen és a megvalósításon át a teljesítésigazolásig és a számlázásig. Mindezt szoros együttműködésben a sales, a jogi és a pénzügyi területtel.",
     ],
     quote: "A tapasztalatom szerint a legtöbb kihívásnál nem a probléma nagysága számít, hanem a megfelelő megközelítés megtalálása.",
     quoteHighlight: "Ezt a gyakorlati szemléletet hozom el minden projektbe, egyszerűbb és összetettebb helyzetekben is.",
@@ -101,42 +101,49 @@ export const hu = {
   },
 
   delivery: {
-    eyebrow: "A teljes delivery egy kézben",
+    eyebrow: "A teljes életciklusban",
     title: "Az első megbeszéléstől az utolsó számláig.",
     description:
-      "Nálam nincs átadás-átvétel a sales, a delivery és a pénzügy között: ugyanaz az ember felel az ügyfélért az első bemutatótól a havi elszámolásig.",
+      "A projekt minden szakaszában részt tudok venni és támogatni tudom a csapatot. A kulcs az együttműködés: szorosan dolgozom együtt a sales, a jogi és a pénzügyi területtel, hogy az átadásoknál ne vesszen el semmi.",
     steps: [
       {
         icon: Presentation,
         title: "Pre-sales",
         text: "Cégbemutató, igényfelmérés és az első ügyfélmegbeszélések a sales csapattal.",
+        with: ["Sales", "Ügyfél"],
       },
       {
         icon: FileSignature,
         title: "Ajánlatadás",
-        text: "Becslés, ajánlat és szerződés előkészítése, tenderekben is.",
+        text: "Becslés és ajánlat, a szerződés előkészítése a jogi területtel, tenderekben is.",
+        with: ["Sales", "Jog"],
       },
       {
         icon: CalendarRange,
         title: "Tervezés",
         text: "Ütemterv, resource planning és a megfelelő csapat összeállítása.",
+        with: ["Fejlesztők"],
       },
       {
         icon: Rocket,
         title: "Megvalósítás",
         text: "Projektvezetés PMP és Scrum alapokon, státuszriportok, kockázatkezelés.",
+        with: ["Fejlesztők", "Ügyfél"],
       },
       {
         icon: Receipt,
         title: "TIG és számlázás",
-        text: "Teljesítésigazolás és számlázás, összehangolva a pénzüggyel.",
+        text: "Teljesítésigazolás az ügyféllel, számlázás a pénzüggyel együttműködve.",
+        with: ["Pénzügy", "Ügyfél"],
       },
       {
         icon: HeartHandshake,
         title: "Account management",
         text: "Havi elszámolás, negyedéves retro az ügyféllel, visszajelzések.",
+        with: ["Ügyfél", "Sales"],
       },
     ],
+    withLabel: "Együttműködés",
     footnote:
       "A háttérben pedig PMO-riportok és erőforrás-tervezés fut JIRA-ban, amelyeket én építettem fel.",
   },
@@ -313,7 +320,7 @@ export const hu = {
           "AI-tanácsadás és AI-projektek részletes tervezése 1–4 hét alatt, az EU AI Act, a DORA és az MNB-elvárások figyelembevételével. Saját AI-bevezetési módszertan kidolgozása.",
           "AI termékfejlesztés: az Athene AI platform (atheneai.hu).",
           "AWS felhő- és webfejlesztési projektek, szolgáltatásmenedzsment a 7x24-es AWS supportszerződésekhez.",
-          "Pre-sales, cégbemutatók, ajánlatkészítés és szerződéskötés, majd TIG és számlázás a pénzüggyel összehangolva.",
+          "Részvétel a pre-salesben, a cégbemutatókban és az ajánlatkészítésben a sales csapattal, a szerződések előkészítése a jogi területtel, a TIG és a számlázás összehangolása a pénzüggyel.",
           "Account management például az MBH Banknál és az EY-nál: havi elszámolás, ügyfél-elégedettség, negyedéves retro.",
           "AWS Alliance Lead: kapcsolattartás az AWS-sel és a TD SYNNEX-szel, partnertámogatások tárgyalása és lehívása, a GenAI kompetencia és további 10+ AWS-minősítés megszerzése.",
           "Zöldmezős JIRA-bevezetés, PMO-riportok és resource planning.",
@@ -371,7 +378,7 @@ export const hu = {
     eyebrow: "Ügyfelek",
     title: "Akikkel és akiknek dolgoztam.",
     description:
-      "Hazai bankok, közművek és nagyvállalatok, valamint amerikai ügyfelek, tanácsadóként és delivery-vezetőként.",
+      "Hazai bankok, közművek és nagyvállalatok, valamint amerikai ügyfelek, tanácsadóként és projektmenedzserként.",
     ids: [
       "kpmg",
       "mbh",
@@ -465,7 +472,7 @@ export const hu = {
         bullets: [
           "Resource planning a projektek között",
           "PMO-riportok JIRA-ban",
-          "TIG és számlázás koordinálása",
+          "TIG és számlázás, a pénzüggyel együtt",
         ],
       },
     ],

@@ -16,7 +16,7 @@ export function Delivery() {
           aria-hidden
           className="pointer-events-none absolute left-[8%] right-[8%] top-[42px] hidden h-px bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 lg:block"
         />
-        {d.steps.map(({ icon: Icon, title, text }, i) => (
+        {d.steps.map(({ icon: Icon, title, text, with: partners }, i) => (
           <li
             key={title}
             className="reveal relative flex gap-4 rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40 lg:flex-col lg:gap-0 lg:p-5"
@@ -30,7 +30,7 @@ export function Delivery() {
                 {String(i + 1).padStart(2, "0")}
               </span>
             </div>
-            <div>
+            <div className="flex min-w-0 flex-1 flex-col">
               <h3 className="text-base font-bold text-foreground lg:mt-1">
                 <span className="mr-2 font-mono text-xs font-medium text-primary/80 lg:hidden">
                   {String(i + 1).padStart(2, "0")}
@@ -38,6 +38,22 @@ export function Delivery() {
                 {title}
               </h3>
               <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{text}</p>
+              {/* Kivel dolgozik együtt ebben a szakaszban: nagy képernyőn a kártya aljára igazítva. */}
+              <div className="mt-3 lg:mt-auto lg:pt-4">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                  {d.withLabel}
+                </p>
+                <div className="mt-1.5 flex flex-wrap gap-1">
+                  {partners.map((p) => (
+                    <span
+                      key={p}
+                      className="rounded-full border border-primary/30 bg-primary/5 px-2 py-0.5 text-[11px] font-semibold text-primary"
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </li>
         ))}
