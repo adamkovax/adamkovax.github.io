@@ -2,7 +2,6 @@ import {
   Award,
   BadgeCheck,
   BarChart3,
-  Bot,
   BrainCircuit,
   Building2,
   CalendarRange,
@@ -72,7 +71,7 @@ export const hu = {
     secondaryCta: "LinkedIn-profil",
     photoAlt: "Kovács Ádám portréja",
     toolsLabel: "Amivel dolgozom",
-    tools: ["Claude Code", "Lovable", "GitHub", "JIRA", "HubSpot", "AWS"],
+    tools: ["Claude Code", "Lovable", "GitHub", "JIRA", "Miro", "AWS", "Vercel", "Supabase", "Sanity"],
   },
 
   stats: [
@@ -99,7 +98,7 @@ export const hu = {
       { icon: Languages, label: "Nyelvek", value: "Magyar, angol (B2/C1)" },
       { icon: GraduationCap, label: "Végzettség", value: "Gazdaságinformatikus BSc" },
       { icon: KanbanSquare, label: "Módszertan", value: "PMP, Scrum, Kanban" },
-      { icon: Workflow, label: "Eszközök", value: "Claude Code, Lovable, JIRA, HubSpot, AWS" },
+      { icon: Workflow, label: "Eszközök", value: "Claude Code, Lovable, GitHub, JIRA, Miro, AWS, Vercel, Supabase, Sanity" },
     ],
   },
 
@@ -211,7 +210,7 @@ export const hu = {
         icon: Presentation,
         title: "Céges bemutatkozók és weboldalak",
         text: "Bemutatkozó prezentációk, landing és webinároldalak, például a webinar.devertix.com.",
-        tools: ["Lovable", "Claude Code", "GitHub"],
+        tools: ["Lovable", "Claude Code", "GitHub", "Vercel", "Supabase", "Sanity"],
       },
       {
         icon: KanbanSquare,
@@ -236,12 +235,6 @@ export const hu = {
         title: "Emlékeztetők és jegyzőkönyvek",
         text: "Meetingek emlékeztetői és jegyzőkönyvei, gyorsan és egységes formában.",
         tools: ["Claude"],
-      },
-      {
-        icon: Bot,
-        title: "HubSpot- és marketing-agentek",
-        text: "Saját agentek a HubSpot-folyamatokhoz és a marketingfeladatokhoz.",
-        tools: ["Claude Code", "HubSpot"],
       },
     ],
     terminal: {
