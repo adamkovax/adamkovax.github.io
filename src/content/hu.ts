@@ -168,7 +168,7 @@ export const hu = {
       },
       {
         icon: Rocket,
-        title: "Élesben működő AI-megoldások",
+        title: "Élesben működő AI‑megoldások",
         text: "Olyan AI-megoldásokat viszek be, amelyek nem a kísérleti fázisban ragadnak, hanem az ügyfelek valós folyamataiban, élesben dolgoznak.",
         tags: ["Éles üzem", "GenAI"],
       },
