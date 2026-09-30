@@ -10,7 +10,6 @@ import {
   CloudCog,
   Code2,
   FileSignature,
-  FlaskConical,
   GraduationCap,
   Handshake,
   HeartHandshake,
@@ -154,7 +153,7 @@ export const hu = {
     eyebrow: "AI-bevezetés",
     title: "Három éve vezetek AI-bevezetéseket ügyfeleknél.",
     description:
-      "Kkv-knak és nagyvállalatoknak, a tervezéstől a PoC-n át az élesítésig, saját bevezetési módszertannal.",
+      "Kkv-knak és nagyvállalatoknak, a tervezéstől az éles üzemig, saját bevezetési módszertannal.",
     stats: [
       { value: "3+ év", label: "AI-bevezetési projektek, több párhuzamosan" },
       { value: "1–5 hónap", label: "egy AI-projekt átlagos átfutása" },
@@ -168,10 +167,10 @@ export const hu = {
         tags: ["EU AI Act", "DORA", "MNB"],
       },
       {
-        icon: FlaskConical,
-        title: "PoC-k leszállítása",
-        text: "Gyors proof of conceptek, amelyekből az ügyfél a teljes bevezetés előtt látja, mit hoz az AI a saját folyamataiban.",
-        tags: ["PoC", "GenAI"],
+        icon: Rocket,
+        title: "Élesben működő AI-megoldások",
+        text: "Olyan AI-megoldásokat viszek be, amelyek nem a kísérleti fázisban ragadnak, hanem az ügyfelek valós folyamataiban, élesben dolgoznak.",
+        tags: ["Éles üzem", "GenAI"],
       },
       {
         icon: Route,
@@ -317,7 +316,7 @@ export const hu = {
         summary:
           "AI-bevezetési és AWS felhőprojektek, a delivery teljes íve, és a cég AWS-partnerkapcsolata.",
         bullets: [
-          "AI-bevezetési projektek kkv-knak és nagyvállalatoknak: több párhuzamos projekt átlagosan 1–5 hónapos átfutással, PoC-k leszállításával.",
+          "AI-bevezetési projektek kkv-knak és nagyvállalatoknak: több párhuzamos projekt átlagosan 1–5 hónapos átfutással, éles üzembe állítással.",
           "AI-tanácsadás és AI-projektek részletes tervezése 1–4 hét alatt, az EU AI Act, a DORA és az MNB-elvárások figyelembevételével. Saját AI-bevezetési módszertan kidolgozása.",
           "AI termékfejlesztés: az Athene AI platform (atheneai.hu).",
           "AWS felhő- és webfejlesztési projektek, szolgáltatásmenedzsment a 7x24-es AWS supportszerződésekhez.",
@@ -400,9 +399,9 @@ export const hu = {
 
   expertise: {
     eyebrow: "Technológiai területek",
-    title: "Ahol otthon vagyok.",
+    title: "Amiben otthon vagyok.",
     items: [
-      { icon: Sparkles, title: "AI-bevezetés", note: "GenAI, PoC, agentek" },
+      { icon: Sparkles, title: "AI-bevezetés", note: "GenAI, agentek, éles üzem" },
       { icon: Scale, title: "AI-tanácsadás", note: "EU AI Act, DORA, MNB" },
       { icon: BrainCircuit, title: "AI termékfejlesztés", note: "Athene AI" },
       { icon: Cloud, title: "Felhőmigráció", note: "AWS" },
