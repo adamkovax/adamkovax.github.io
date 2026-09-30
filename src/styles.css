@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+/*
+ * Kovács Ádám CV-oldal.
+ * A színrendszer az AI First Mentors oldaléval azonos: sötét, zöldesfekete alap,
+ * menta-smaragd kiemelés, és a lila "tejút" köd csak a mélységért felel.
+ * Minden szín tokenen keresztül megy, a komponensekben nincs beégetett szín.
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-nebula: var(--nebula);
+  --color-nebula-lilac: var(--nebula-lilac);
+  --color-nebula-orchid: var(--nebula-orchid);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  --background: #0a0f0c;
+  --foreground: #ffffff;
+  --card: #0d1512;
+
+  --primary: #10e5a0;
+  --primary-rgb: 16 229 160;
+  --primary-foreground: #0a0f0c;
+  --primary-hover: #0fc98f;
+
+  --muted: #121b17;
+  --muted-foreground: #a0a8a5;
+  --border: #1f2e28;
+
+  --nebula: #7b5cff;
+  --nebula-rgb: 123 92 255;
+  --nebula-lilac: #b48cff;
+  --nebula-lilac-rgb: 180 140 255;
+  --nebula-orchid: #c65cf0;
+  --nebula-orchid-rgb: 198 92 240;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: rgb(var(--primary-rgb) / 30%);
+  }
+}
+
+/* Halvány, statikus szín-átmenet az egész oldal mögött (ugyanaz, mint az AIFM-en). */
+.app-background {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--background);
+}
+
+.app-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 12% -10%, rgb(var(--primary-rgb) / 12%), transparent 60%),
+    radial-gradient(ellipse 60% 45% at 100% 100%, rgb(var(--primary-rgb) / 9%), transparent 65%),
+    linear-gradient(
+      128deg,
+      transparent 22%,
+      rgb(var(--primary-rgb) / 4%) 36%,
+      rgb(var(--primary-rgb) / 8%) 46%,
+      rgb(var(--primary-rgb) / 9%) 50%,
+      rgb(var(--primary-rgb) / 6%) 55%,
+      rgb(var(--primary-rgb) / 3%) 64%,
+      transparent 78%
+    );
+  background-repeat: no-repeat;
+}
+
+/* ============ Tejút réteg (GalaxyVeil) ============ */
+
+.galaxy-clouds-card {
+  background-image:
+    radial-gradient(ellipse 66% 56% at 12% -8%, rgb(var(--nebula-rgb) / 40%), transparent 64%),
+    radial-gradient(ellipse 60% 50% at 90% 108%, rgb(var(--primary-rgb) / 26%), transparent 64%),
+    radial-gradient(ellipse 74% 62% at 50% 50%, rgb(var(--nebula-lilac-rgb) / 18%), transparent 70%),
+    radial-gradient(ellipse 44% 44% at 102% 38%, rgb(var(--nebula-orchid-rgb) / 22%), transparent 62%),
+    linear-gradient(
+      126deg,
+      transparent 14%,
+      rgb(var(--nebula-rgb) / 18%) 30%,
+      rgb(var(--nebula-lilac-rgb) / 20%) 46%,
+      rgb(var(--primary-rgb) / 14%) 62%,
+      transparent 82%
+    );
+  background-repeat: no-repeat;
+  animation: galaxy-drift 30s ease-in-out infinite alternate;
+}
+
+.galaxy-dust {
+  background-image:
+    radial-gradient(1.4px 1.4px at 18% 22%, rgb(255 255 255 / 70%), transparent 60%),
+    radial-gradient(1.2px 1.2px at 72% 38%, rgb(var(--nebula-lilac-rgb) / 85%), transparent 60%),
+    radial-gradient(1px 1px at 40% 66%, rgb(255 255 255 / 55%), transparent 60%),
+    radial-gradient(1.6px 1.6px at 86% 74%, rgb(var(--primary-rgb) / 75%), transparent 60%),
+    radial-gradient(1px 1px at 8% 88%, rgb(255 255 255 / 40%), transparent 60%),
+    radial-gradient(1.2px 1.2px at 60% 10%, rgb(var(--nebula-orchid-rgb) / 70%), transparent 60%);
+  background-size:
+    620px 620px,
+    480px 480px,
+    760px 760px,
+    540px 540px,
+    900px 900px,
+    700px 700px;
+  background-repeat: repeat;
+  opacity: 0.7;
+  animation: galaxy-drift 54s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes galaxy-drift {
+  from {
+    transform: translate3d(-1.5%, -1%, 0) scale(1.02);
+  }
+  to {
+    transform: translate3d(2%, 1.5%, 0) scale(1.06);
+  }
+}
+
+/* A cégek logói egységesen fehér sziluettként jelennek meg a sötét alapon,
+   így a sokféle márkaszín nem üt el egymástól. */
+.logo-mono {
+  filter: brightness(0) invert(1);
+}
+
+/* Kitöltött formájú logókhoz: a sötét forma világos lesz, a fehér betűk sötétek,
+   és a screen keverés a sötét részeket átlátszóvá teszi a kártyán. */
+.logo-knockout {
+  filter: grayscale(1) invert(1) contrast(1.5) brightness(1.1);
+  mix-blend-mode: screen;
+}
+
+/* Görgetésre finoman beúszó blokkok. A .reveal-t a useReveal hook kapcsolja be. */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* A villogó kurzor a terminál-kártyán. */
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 1.1em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background: var(--primary);
+  animation: caret-blink 1.1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .galaxy-clouds-card,
+  .galaxy-dust,
+  .caret::after {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
