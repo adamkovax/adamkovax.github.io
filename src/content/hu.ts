@@ -62,7 +62,7 @@ export const hu = {
   menuLabel: "Menü",
 
   hero: {
-    badge: "PMP · Accredited Scrum Master · AWS és Lovable partner",
+    badge: "PMP · Accredited Scrum Master · AWS partner · Lovable Expert",
     name: "Kovács Ádám",
     role: "IT projektmenedzser és AI‑bevezetési tanácsadó",
     leadBefore: "Az első ügyféltalálkozótól a számlázásig végigviszem a projekteket, ",
@@ -450,8 +450,8 @@ export const hu = {
       { icon: BadgeCheck, title: "PMP", subtitle: "Project Management Professional · PMI" },
       {
         icon: BadgeCheck,
-        title: "Lovable Partner",
-        subtitle: "Lovable · 2026. szeptember",
+        title: "Lovable Expert",
+        subtitle: "Lovable Partner Program · 2026. szeptember",
         logo: { src: "/logos/lovable-icon.svg", treatment: "color" },
         isNew: true,
       },
